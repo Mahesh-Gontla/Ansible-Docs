@@ -1,3 +1,10 @@
+First step: Install httpd package
+
+Second step: Enable/start httpd service
+
+Third step: Create an index.html file
+
+
 ---
 - name: Apache HTTPD Server Installation using Ansible-Playbook
   hosts: all
