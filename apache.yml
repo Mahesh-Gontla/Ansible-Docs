@@ -1,0 +1,19 @@
+---
+- name: Apache HTTPD Server Installation using Ansible-Playbook
+  hosts: all
+  become: yes
+  tasks:
+  - name: HTTPD package installation using yum
+    yum:
+      name: httpd
+      state: present
+  - name: Apache enabled and start
+    service:
+      name: httpd
+      enabled: true
+      state: started
+  - name: copy index.html
+    copy:
+      src: /home/ansible-admin/ws1
+      dest: /var/www/html
+
